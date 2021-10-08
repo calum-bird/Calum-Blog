@@ -36,8 +36,8 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Contentful Starter",
-    description: "Official Contentful Gatsby Starter",
+    title: "Calum Bird",
+    description: "A collection of posts by Calum Bird.",
   },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [
