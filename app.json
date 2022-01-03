@@ -1,20 +1,12 @@
 {
-  "name": "Contentful Gatsby Starter",
-  "description": "Gatsby starter for a Contentful project.",
+  "name": "Calum Bird's Website",
+  "description": "Calum Bird's personal portfolio & blog website.",
   "keywords": [
-    "contentful",
-    "gatsby",
-    "static",
-    "ssg"
+    "calum",
+    "calum bird",
+    "calum blog",
+    "calum bird blog"
   ],
-  "repository": "https://github.com/contentful-userland/gatsby-contentful-starter",
-  "success_url": "/",
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    },
-    {
-      "url": "https://github.com/heroku/heroku-buildpack-static"
-    }
-  ]
+  "repository": "https://github.com/calum-bird/Calum-Blog",
+  "success_url": "/"
 }

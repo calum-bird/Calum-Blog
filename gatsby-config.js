@@ -39,7 +39,7 @@ module.exports = {
     title: "Calum Bird",
     description: "A collection of posts by Calum Bird.",
   },
-  pathPrefix: "/gatsby-contentful-starter",
+  pathPrefix: "/calum-bird-website",
   plugins: [
     "gatsby-transformer-remark",
     "gatsby-transformer-sharp",
