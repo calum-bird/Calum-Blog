@@ -1,5 +1,3 @@
-# Welcome to my website :)
+# Calum Bird's Site
 
-This is hosted using Cloudflare Pages in conjunction with Contenful. Source repo for Gatsby starter can be found [here](https://github.com/contentful/starter-gatsby-blog). All content changes are run through Contentful CMS, so the only commits here will be style/layout/framework changes.
-
-Opinions are my own and not representative of Trelent Inc.
+A [zola](https://www.getzola.org/) theme called [nodep](https://github.com/Tsai002/nodep)  by [Tsai002](https://github.com/Tsai002) hosted on [CloudFlare Pages](https://pages.cloudflare.com/).
