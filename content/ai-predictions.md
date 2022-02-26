@@ -1,6 +1,6 @@
 +++
 title = "AI Predictions"
-date = "2022-02-25"
+date = "2022-02-26"
 +++
 
 ### Long time no post!
