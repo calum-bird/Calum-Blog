@@ -1,19 +1,19 @@
 +++
-title = "Why GPU prices won't go down anytime soon."
+title = "Why GPU prices won't go down anytime soon"
 date = "2022-06-06"
 +++
 
 I have been exposed to a lot of sensational pieces following Nvidia's stock price
-plummeting 35% over the past few monthsm, and I don't think they are accurate. A lot of
+plummeting 35% over the past few months, and I don't think they are accurate. A lot of
 these pieces focus on the crypto crash, and how Nvidia was heavily exposed to that
 particular market. This is accurate to some extent, but I don't think anybody is 
 accounting for where that GPU compute is going to go now.
 
 Deep learning requires incredible amounts of compute resources, and the return on
-investment on training a massive model is incredibly high. Take GPT-3 for instance, which
+investment for training a massive model is incredibly high. Take GPT-3 for instance, which
 was trained by OpenAI for somewhere around \$10M when including research expenses.
 Microsoft followed up on their \$1B investment in OpenAI by purchasing exclusive licensing
-rights to GPT-3. It is unknown how large that licensing deal was, but I suspect that it
+rights to GPT-3 in September 2020. It is unknown how large that licensing deal was, but I suspect that it
 is safe to say that deal would itself have been north of \$100M. A 10x ROI for OpenAI,
 100x if you include the $1B investment that was made prior to the licensing deal.
 
