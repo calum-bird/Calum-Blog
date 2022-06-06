@@ -1,5 +1,5 @@
 name = "Calum Bird"
-description = "My blog, on a minimal Zola theme."
+description = "Some articles I have published on topics I am passionate about."
 license = "MPL 2.0"
 homepage = "https://github.com/calum-bird/calum-blog"
 # The minimum version of Zola required
@@ -13,7 +13,7 @@ min_version = "0.4.0"
 
 # The theme author info: you!
 [author]
-name = "Calum"
+name = "Calum Bird"
 homepage = "https://calumbird.com"
 
 # If this is porting a theme from another static site engine, provide

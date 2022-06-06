@@ -4,16 +4,13 @@
   <div class="wrapper">
     <header>
       <h3>{{ config.title }}</h3>
-
       <p>{{ config.description }}</p>
-
-      <br>
-      {%- if config.generate_feed -%}
-      <a href="atom.xml"><img alt="RSS" height="32" width="32" src="{{ get_url(path="/imgs/rss.svg", trailing_slash=false) }}"></a>
-      {%- endif -%}
-
+      <h4>Progress towards AGI:</h4>
+      <div style="text-align: center;">
+        <div id="progress-to-agi"></div>
+        <code id="countdown-timer"></code>
+      </div>
     </header>
-
     <section>
           <br>
         {% for page in section.pages %}
@@ -21,8 +18,71 @@
           <a href="{{ page.permalink | safe }}">{{ page.title }}</a><br>
           <br>
         {% endfor %}
-
     </section>
   </div>
+  <script type="text/javascript" src="progressbar.min.js"></script>
+  <script type="text/javascript">
+    function updateTimer(countdown, now) {
+      // Add a countdown timer
+      var distance = countdown - now;
+      var years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365));
+      var days = Math.floor((distance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown-timer").innerHTML = years + "y, " + days + "d, " + hours + "h, " + minutes + "m, " + seconds + "s";
+    }
+
+    // Industrial revolution
+    var startDate = new Date("1760-01-01").getTime();
+
+    // AGI estimate
+    var countDownDate = new Date("2035-01-01").getTime();
+
+    // Difference
+    var total = countDownDate - startDate;
+
+
+    // Get current date and time
+    var now = new Date().getTime();
+    var progress = (now - startDate)/total;
+
+    // Create the progress bar
+    var line = new ProgressBar.SemiCircle('#progress-to-agi', {
+      strokeWidth: 6,
+      easing: 'easeOut',
+      color: '#46abda'
+    });
+    line.animate(progress, {
+      duration: 800,
+    });
+    line.setText((progress * 100).toFixed(8) + '%');
+    updateTimer(countDownDate, now);
+
+
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+      // Get current time
+      var now = new Date().getTime();
+
+      // Find the distance between now an the count down date
+      progress = (now-startDate)/total;
+
+      line.set(progress);
+      line.setText((progress * 100).toFixed(8) + '%');
+      
+      // Add a countdown timer
+      updateTimer(countDownDate, now);
+
+      // If the count down is over, write some text
+      if (progress >= 1) {
+        clearInterval(x);
+        document.getElementById("countdown-timer").innerHTML = "EXPIRED. Are we in the singularity yet?";
+      }
+    }, 1000);
+  </script>
 
 {% endblock content %}

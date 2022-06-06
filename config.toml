@@ -1,5 +1,6 @@
 title = "Calum Bird"
 description = "I'll try to publish helpful reads here. Mostly learnings from my journey in the software & startup universes. Don't take everything I say at face value, there is a high probability that I am just as wrong as anyone else."
+countdown_date = "2035-01-01"
 
 # The URL the site will be built for
 base_url = "https://calumbird.com"
@@ -10,7 +11,7 @@ compile_sass = false
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
-generate_feed = true
+generate_feed = false
 
 [markdown]
 # Whether to do syntax highlighting

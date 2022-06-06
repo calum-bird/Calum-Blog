@@ -3,6 +3,7 @@
     <div class="blogpost">
       <a href="{{ config.base_url }}">&#8592; Home</a>
       <h2 class="post-title">{{ page.title }}</h2>
+      <h5>Original: &nbsp;{{ page.date }}<br/>Updated: {{ page.updated }}</h5>
       {{ page.content | safe }}
     </div>
 {% endblock content %}
