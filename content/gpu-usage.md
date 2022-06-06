@@ -19,14 +19,14 @@ is safe to say that deal would itself have been north of \$100M. A 10x ROI for O
 
 Let's consider the compute resources required to train GPT-3 - a model known for being
 *undertrained* relative to its size. OpenAI was known to leverage a supercomputer built
-in partnership with Microsoft Azure that contained around 10,000 Nvidia V-100 GPU's.
+in partnership with Microsoft Azure that contained around 10,000 Nvidia V100 GPU's.
 These GPU's had an MSRP of around \$11,500 at the time, and accounting for volume
 discounts I suspect the pricing was closer to \$7,000 per GPU, for a total of ~\$70M. That
 being said, that compute was only used for a few months out of the multi-year lifetime
 of that supercomputer, hence the $10M price tag, with around \$6M of that being dedicated
-to training, and the rest corresponding research and development costs. Thest V-100 GPU's
+to training, and the rest corresponding research and development costs. Thest V100 GPU's
 are the top of the line silicon from Nvidia. You could build dozens of consumer-grade
-SKU's out of a single V-100 GPU because of the high number of imperfections in the
+SKU's out of a single V100 GPU because of the high number of imperfections in the
 manufacturing process that get thrown out in pursuit of the best possible silicon chip.
 
 Crypto mining rigs have historically used consumer-grade GPU's for running hashing
@@ -35,7 +35,7 @@ in an extremely expensive manner. What has changed, however, is that as machine 
 has increasing applications in the consumer space, more and more consumer-level GPU's
 contain the top-end silicon referred to earlier. That means that using 8 consumer GPU's
 for deep learning workflows might begin to make economic sense instead of a single
-enterprise GPU like the V-100.
+enterprise GPU like the V100.
 
 In addition to all of this, there are supply constraints. Simply put, chip fabs like TSMC
 that Nvidia relies on are operating **at or above** maximum capacity, and new capacity
