@@ -1,6 +1,7 @@
 +++
 title = "Hello, world!"
 date = "2022-01-16"
+updated = "2022-01-16"
 +++
 
 Hey there, future visitor! If you're reading this, it is most definitely after I decided to publish (or commit, rather), which means you, my friend, are from the future. How impressive!

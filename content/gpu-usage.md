@@ -1,6 +1,7 @@
 +++
 title = "Why GPU prices won't go down anytime soon"
 date = "2022-06-06"
+updated = "2022-06-06"
 +++
 
 I have been exposed to a lot of sensational pieces following Nvidia's stock price

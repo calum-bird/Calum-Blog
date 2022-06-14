@@ -1,6 +1,7 @@
 +++
 title = "AI Predictions"
 date = "2022-02-26"
+updated = "2022-06-14"
 +++
 
 ### Long time no post!
@@ -14,6 +15,7 @@ ___
 ### Predictions:
 
 1. There will be a 1 Trillion parameter LLM in the open-source domain within two years.
+    - June 14th 2022: Google [open-sourced](https://github.com/google-research/t5x) a 1.6 Trillion parameter mixture of experts LLM, beating my prediction by 18 months
 2. Within three years, a combination of multiple trillion-parameter multi-modal models, each trained for specific tasks, will become world-class experts in most fields. Eg. LLM base + Physics model + Diffusion model = world-class physicist expressing knowledge through art.
 3. Within five years, the above model will be abstracted to a general purpose model that is a world-class expert in all fields.
 
