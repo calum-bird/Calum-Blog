@@ -1,9 +1,0 @@
-{% extends "base.html" %}
-{% block content %}
-    <div class="blogpost">
-      <a href="{{ config.base_url }}">&#8592; Home</a>
-      <h2 class="post-title">{{ page.title }}</h2>
-      <code style="font-size: small;">Original: {{ page.date }}<br/>Updated:&nbsp; {{ page.updated }}</code>
-      {{ page.content | safe }}
-    </div>
-{% endblock content %}
