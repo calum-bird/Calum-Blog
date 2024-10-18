@@ -26,12 +26,12 @@ export default function Posts() {
           <CardHeader>
             <CardTitle className="text-2xl font-bold">{post.title}</CardTitle>
             <CardDescription>
-              <blockquote className="border-l-2 border-primary pl-2 italic text-muted-foreground">
+              <span className="border-l-2 border-primary pl-2 italic text-muted-foreground">
                 {post.excerpt}
-              </blockquote>
-              <p className="text-muted-foreground mt-4">
+              </span>
+              <span className="text-muted-foreground mt-4">
                 Written on {format(new Date(post.date), "LLLL Lo, yyyy")}
-              </p>
+              </span>
             </CardDescription>
           </CardHeader>
           {post.coverImage && (

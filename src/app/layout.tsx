@@ -15,19 +15,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="system"
-        enableSystem
-        disableTransitionOnChange
-      >
-        <body className="antialiased bg-background text-foreground min-h-dvh">
-          <Navbar />
-          <div className="max-w-[90ch] mx-auto overflow-x-hidden h-dvh">
-            {children}
+      <body className="antialiased">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="bg-background text-foreground min-h-dvh">
+            <Navbar />
+            <div className="max-w-[90ch] mx-auto overflow-x-hidden h-[calc(100dvh-65px)]">
+              {children}
+            </div>
           </div>
-        </body>
-      </ThemeProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

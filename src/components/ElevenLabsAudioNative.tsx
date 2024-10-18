@@ -39,8 +39,8 @@ export const ElevenLabsAudioNative = ({
       data-publicuserid={publicUserId}
       data-playerurl="https://elevenlabs.io/player/index.html"
       data-small={size === "small" ? "True" : "False"}
-      data-textcolor={textColorRgba ?? "rgba(0, 0, 0, 1.0)"}
-      data-backgroundcolor={backgroundColorRgba ?? "rgba(255, 255, 255, 1.0)"}
+      data-textcolor={textColorRgba ?? "var(--foreground)"}
+      data-backgroundcolor={backgroundColorRgba ?? "rgb(var(--secondary))"}
     >
       {children ? children : <Skeleton className="h-[90px] w-full" />}
     </div>
