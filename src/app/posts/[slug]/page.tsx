@@ -1,4 +1,3 @@
-import ElevenLabsAudioNative from "@/components/ElevenLabsAudioNative";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 
 import { format } from "date-fns";
@@ -36,8 +35,7 @@ export default async function Post({ params }: Params) {
           />
         )}
       </header>
-      <ElevenLabsAudioNative publicUserId="cfc6aa362c2cda2bae56e3f8cdef25a076d87b4e3291d92daaf9e22d36beba2f" />
-      <section className="prose dark:prose-invert prose-lg mx-auto mt-8 max-w-[80ch]">
+      <section className="prose prose-lg mx-auto mt-8 max-w-[80ch]">
         <ReactMarkdown>{post.content}</ReactMarkdown>
       </section>
       {post.preview && (
