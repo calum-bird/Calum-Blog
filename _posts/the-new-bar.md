@@ -50,3 +50,5 @@ Windsurf, etc.). If you are viewed as a service, the value you provide is fundam
 price of a token, and instead relies on its utility. Preferrably, you can find a way to price your service in a
 usage or outcome-based manner so that you win twice - once on the widening utility-cost ratio, and once on your
 customers growing thanks to your product.
+
+... To be continued. This post is a draft.
