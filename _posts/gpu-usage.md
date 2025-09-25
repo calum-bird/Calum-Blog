@@ -5,8 +5,6 @@ author:
   name: "Calum Bird"
   picture: "/assets/blog/authors/calum.jpg"
 excerpt: "An analysis of the factors keeping GPU prices high, including deep learning demand and supply constraints."
-ogImage:
-  url: "/assets/blog/gpu-usage/cover.jpg"
 ---
 
 I have been exposed to a lot of sensational pieces following Nvidia's stock price

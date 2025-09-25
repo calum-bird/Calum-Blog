@@ -5,8 +5,6 @@ author:
   name: "Calum Bird"
   picture: "/assets/blog/authors/calum.jpg"
 excerpt: "Predictions about the future of AI and its impact on various fields."
-ogImage:
-  url: "/assets/blog/ai-predictions/cover.jpg"
 ---
 
 ### Long time no post!

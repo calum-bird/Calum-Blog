@@ -1,11 +1,12 @@
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { getPostBySlug } from "@/lib/api";
-import { Menu } from "lucide-react";
-import { headers } from "next/headers";
+"use client";
+
+import { Post } from "@/types/post";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useMemo } from "react";
 
 const Navbar = () => {
-  const pathname = headers().get("x-pathname") as string;
+  const pathname = usePathname();
   const NavLinks = () => (
     <>
       <Link href="/posts" className="hover:underline">
@@ -15,22 +16,29 @@ const Navbar = () => {
   );
 
   const Breadcrumb = () => {
-    const pathSegments = pathname.split("/").filter(Boolean);
-    const isPostPage = pathSegments[0] === "posts" && pathSegments.length === 2;
-    const breadcrumbItems = [
-      { label: "Calum Bird", href: "/" },
-      ...pathSegments.map((segment, index) => ({
-        label: segment.charAt(0).toUpperCase() + segment.slice(1),
-        href: `/${pathSegments.slice(0, index + 1).join("/")}`,
-      })),
-    ];
+    const breadcrumbItems = useMemo(() => {
+      const pathSegments = pathname.split("/").filter(Boolean);
+      const items = [
+        { label: "Calum Bird", href: "/" },
+        ...pathSegments.map((segment, index) => ({
+          label: segment.charAt(0).toUpperCase() + segment.slice(1),
+          href: `/${pathSegments.slice(0, index + 1).join("/")}`,
+        })),
+      ];
 
-    if (isPostPage) {
-      const post = getPostBySlug(pathSegments[1]);
-      if (post) {
-        breadcrumbItems[breadcrumbItems.length - 1].label = post.title;
+      const isPostPage =
+        pathSegments[0] === "posts" && pathSegments.length === 2;
+      if (isPostPage) {
+        fetch(`/api/post/${pathSegments[1]}`)
+          .then((response) => response.json())
+          .then((post: Post) => {
+            items[items.length - 1].label = post.title;
+          })
+          .catch((error) => console.error("Error fetching post:", error));
       }
-    }
+
+      return items;
+    }, []);
 
     return (
       <ul className="flex items-center">
@@ -55,30 +63,11 @@ const Navbar = () => {
       <div className="max-w-[90ch] mx-auto px-4 relative">
         <div className="flex items-center justify-between h-16">
           <Breadcrumb />
-          {(pathname === "/" ||
-            (pathname.startsWith("/posts/") &&
-              pathname.split("/").length === 3)) && (
-            <>
-              <div className="hidden sm:flex items-center space-x-8">
-                <NavLinks />
-              </div>
-              <div className="sm:hidden">
-                <Sheet>
-                  <SheetTrigger asChild>
-                    <button className="p-2">
-                      <Menu className="h-6 w-6" />
-                    </button>
-                  </SheetTrigger>
-                  <SheetContent side="right">
-                    <div className="mt-6 flex flex-col space-y-4">
-                      <NavLinks />
-                    </div>
-                    <Breadcrumb />
-                  </SheetContent>
-                </Sheet>
-              </div>
-            </>
-          )}
+          <div className="flex items-center space-x-8">
+            {(pathname === "/" ||
+              (pathname.startsWith("/posts/") &&
+                pathname.split("/").length === 3)) && <NavLinks />}
+          </div>
         </div>
       </div>
       <div className="fixed top-0 left-1/2 transform -translate-x-1/2 w-[calc(100%-2rem)] max-w-[90ch] mx-auto flex justify-between z-50 pointer-events-none">

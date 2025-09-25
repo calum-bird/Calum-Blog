@@ -5,8 +5,6 @@ author:
   name: "Calum Bird"
   picture: "/assets/blog/authors/calum.jpg"
 excerpt: "A discussion on why ML models are not the end goal, but rather enablers for innovative products."
-ogImage:
-  url: "/assets/blog/models-arent-the-endgame/cover.jpg"
 ---
 
 There has been a lot of conversation lately about ML models being the goal. Let's talk
