@@ -44,7 +44,7 @@ export default function Home() {
               >
                 <span className="group-hover:underline">{post.title}</span>{" "}
                 <span className="text-muted-foreground">
-                  ({format(post.date, "LLLL Lo, yyyy")})
+                  ({format(new Date(post.date), "LLLL Lo, yyyy")})
                 </span>
               </Link>
             ))}

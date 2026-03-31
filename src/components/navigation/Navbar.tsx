@@ -3,7 +3,7 @@
 import { Post } from "@/types/post";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useMemo } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -16,29 +16,27 @@ const Navbar = () => {
   );
 
   const Breadcrumb = () => {
-    const breadcrumbItems = useMemo(() => {
-      const pathSegments = pathname.split("/").filter(Boolean);
-      const items = [
-        { label: "Calum Bird", href: "/" },
-        ...pathSegments.map((segment, index) => ({
-          label: segment.charAt(0).toUpperCase() + segment.slice(1),
-          href: `/${pathSegments.slice(0, index + 1).join("/")}`,
-        })),
-      ];
+    const pathSegments = pathname.split("/").filter(Boolean);
+    const isPostPage = pathSegments[0] === "posts" && pathSegments.length === 2;
+    const [postTitle, setPostTitle] = useState<string | null>(null);
 
-      const isPostPage =
-        pathSegments[0] === "posts" && pathSegments.length === 2;
-      if (isPostPage) {
-        fetch(`/api/post/${pathSegments[1]}`)
-          .then((response) => response.json())
-          .then((post: Post) => {
-            items[items.length - 1].label = post.title;
-          })
-          .catch((error) => console.error("Error fetching post:", error));
-      }
+    useEffect(() => {
+      if (!isPostPage) return;
+      fetch(`/api/post/${pathSegments[1]}`)
+        .then((response) => response.json())
+        .then((post: Post) => setPostTitle(post.title))
+        .catch(() => {});
+    }, [isPostPage, pathSegments]);
 
-      return items;
-    }, []);
+    const breadcrumbItems = [
+      { label: "Calum Bird", href: "/" },
+      ...pathSegments.map((segment, index) => ({
+        label: index === pathSegments.length - 1 && isPostPage && postTitle
+          ? postTitle
+          : segment.charAt(0).toUpperCase() + segment.slice(1),
+        href: `/${pathSegments.slice(0, index + 1).join("/")}`,
+      })),
+    ];
 
     return (
       <ul className="flex items-center">

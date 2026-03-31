@@ -1,9 +1,10 @@
 ---
-title: "The new bar (draft)"
+title: "The new bar"
 date: "2025-09-25"
 author:
   name: "Calum Bird"
 excerpt: "AI companies are raising the bar for high growth startups. Why?"
+draft: true
 ---
 
 I was recently watching an episode of "A Cheeky Pint" by Stripe's John Collison. This one was with Des Traynor
