@@ -1,6 +1,6 @@
 ---
 title: "Great developers own their code"
-date: "2022-06-06"
+date: "2026-03-30"
 author:
   name: "Calum Bird"
   picture: "/assets/blog/authors/calum.jpg"
