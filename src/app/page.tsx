@@ -13,7 +13,7 @@ export default function Home() {
       <div className="pr-8">
         <h1 className="text-4xl lg:text-5xl mb-4 font-serif">Hi! My name is Calum.</h1>
         <p className="text-lg mb-4">
-          I&apos;m a 23 year old tinkerer who grew up in the rural interior of BC, Canada. Nowadays, you&apos;ll find me in Victoria BC. I stumbled across machine learning in 2015 and LLMs in 2018. In 2021, I dropped out of Mount Allison University to build my startup, Trelent.
+          I&apos;m a 24 year old tinkerer who grew up in the rural interior of BC, Canada. Nowadays, you&apos;ll find me either in Victoria BC, or on a plane. I stumbled across machine learning in 2015 and LLMs in 2019. In 2021, I dropped out of Mount Allison University to build my startup, Trelent around these powerful language models.
         </p>
         <p className="text-lg">Since then, I have become most known for:</p>
         <ul className="list-disc pl-2 list-inside mb-4 text-lg">
